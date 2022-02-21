@@ -1,12 +1,5 @@
 version: "3"
 services:
-  rest-api:
-    build:
-      context: .
-      dockerfile: ./dockers/rest.Dockerfile
-    ports:
-      - 8080:8080
-  
   config-server:
     build:
       context: .
@@ -15,3 +8,16 @@ services:
       - ./config:/usr/src/config
     ports:
       - 8888:8888
+  
+  app-client:
+    build:
+      context: .
+      dockerfile: ./dockers/app-client.Dockerfile
+    ports:
+      - 8080:8080
+  rest-api:
+    build:
+      context: .
+      dockerfile: ./dockers/rest.Dockerfile
+    ports:
+      - 8000:8080
