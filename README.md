@@ -2,6 +2,8 @@
 
 ## Centralized Configuration
 
+Run `docker-compose up --build`
+
 ### Browse demo application
 
 http://localhost:8080/message
